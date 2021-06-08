@@ -10,9 +10,9 @@ Branch: Main
 
 
 
-Branch: Al
-  Contains faster RCNN pipeline
-  Retinanet pipeline that includes evaluation and error analysis
+Branch: Al\
+  Contains faster RCNN pipeline\
+  Retinanet pipeline that includes evaluation and error analysis\
 
 
 Branch: Keane_temp
