@@ -24,6 +24,7 @@ Branch: Rina\
 
 Branch: Joy\
   YOLO pipeline:
-    * 1_Create_Dateset.ipynb
-    * 2_TrainYOLO.ipynb
+  
+    - 1_Create_Dateset.ipynb
+    - 2_TrainYOLO.ipynb
   Also contains preprocessed dataset [YOLO] (resized 2D images along with their processed true label boxes)  
