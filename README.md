@@ -19,7 +19,7 @@ Branch: Keane_temp
 >  This folder contains the pre-processing and VGG model training and testing notebooks before 
         integration. The integrated vgg model exists within the \code directory in the google drive 
         repository. The files and their basic functionality are described below:
- :rocket:
+ 
  Files:
  
  1. get_dbt_data.ipynb
@@ -29,12 +29,17 @@ Branch: Keane_temp
 
 
  3. read_single_dbt.ipynb
-        > Generic test function used for testing initial setup of get_dbt_data.ipynb (essentially a scratch function)
+     > Generic test function used for testing initial setup of get_dbt_data.ipynb (essentially a scratch function)
  4. VGG_Classify.ipynb
-        > This is the main function of the VGG Classifier. It contains the building blocks for the VGG16 model format, which includes the model and the dataloader configuration to split and use training data for training and validation. In addition to the model, this code has a testing and training setup. To train, the code is run normally. Once specific criteria are met during the validation run of the model during training, model checkpoints are saved off. Model saves are also done for each epoch. After training, there's a selectable cell that will run the saved model (of choice) and produce various metrics on its performance.
- VGG_DBT.ipynb
- VGG_driver.ipynb
+     > This is the main function of the VGG Classifier. It contains the building blocks for the VGG16 model format, which includes loading the saved/trained  model and the dataloader configuration. The intention of this code is to test out the final form of VGG classify without RetinaNet inputs. The integrated version of this stored in the google drive is the final version of this. To run, this can use fake box data (to simulate RetinaNet inputs) as inputs or a single box row.
+ 
+ 5. VGG_DBT.ipynb
+     > This file is the pre-cursor to VGG_Classify, but is not tailored for integration (intended as a stand-alone without RetinaNet expected inputs). It contains most of the same functionality as VGG_Classify. To train, the code is run normally. Once specific criteria are met during the validation run of the model during training, model checkpoints are saved off. Model saves are also done for each epoch. After training, there's a selectable cell that will run the saved model (of choice) and produce various metrics on its performance. The test component of this has a selector to enable it and will run through the saved index of files not used for training (saved during the training dataloader setup) to avoid mixing in trained data. The DBT challenge Test or Validation datasets could be used (in conjuction with faked RetinaNet patch coordinates)
+ 
+ 6. VGG_driver.ipynb
+       > This is a temporary driver routine to mimic integration and get the classify code ready to be ported to the google drive format/location.
 
+* For the final versions of these, tailored for integration, see the Google Drive DBTdata folder *
 
 Branch: Rina\
   This branch is only for place-holding purposes. Please see the shared Google Drive "DBTdata" and its README for the code.
